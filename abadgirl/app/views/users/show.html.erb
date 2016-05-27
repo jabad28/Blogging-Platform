@@ -1,3 +1,28 @@
 <div>
-  Welcome, <%= @user.email %>
+  Welcome, <%= @user.first_name %>
 </div>
+
+<section class="search">
+  <div class="row">
+    <div class="small-12 large-10 columns small-centered">
+      <h2> Create a Blog Post! </h2>
+      <form class="custom">
+        <div class="row">
+          <div class="large-3 small-12 columns">
+            <label>
+              Blog Type:
+            </label>
+              <select>
+                <option value="beauty-blog">Beauty Blog</option>
+                <option value="fashion-blog">Fashion Blog</option>
+              </select>
+          </div>
+          <div class="large-3 small-12 columns expand">
+            <%= link_to "Create Blog Post", new_post_path(@post), method: :get, class: "link"%>
+            <a href="#" class="button expand"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

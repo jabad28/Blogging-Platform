@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  # require 'bcrypt'
 
   def new
     @user = User.new
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-      flash[:notice] = "Successfully logged in."     
+      flash[:notice] = "Successfully logged in."
       redirect_to @user
     else
       flash[:error] = "Incorrect email or password."

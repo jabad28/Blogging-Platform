@@ -1,0 +1,10 @@
+<% if current_user.id == @user.id %>
+  <%= link_to "New Post", new_post_path(current_user), class:"button success" %>
+<hr>
+<% end %>
+
+<% if current_user != @user %>
+  <% @posts.order(created_at: :desc).each do |post| %>
+  <%= render 'posts/show', post: post %>
+  <% end %>
+<% end %>

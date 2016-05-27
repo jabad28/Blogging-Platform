@@ -1,4 +1,4 @@
-Sign Up
+<!-- Sign Up
 
 <%= form_for @user do |f| %>
   <div>
@@ -14,4 +14,38 @@ Sign Up
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
   <%= f.submit "Sign Up" %>
-<% end %>
+<% end %> -->
+
+
+<div class="row">
+   <div class="large-6 columns">
+     <div class="signup-panel">
+       <p class="welcome"> Welcome to AbadGirl!</p>
+        <%= form_for @user do |f| %>
+          <div class="row collapse">
+           <div class="small-10  columns">
+            <%= f.text_field :first_name, placeholder:"First Name" %><br>
+           </div>
+          </div>
+          <div class="row collapse">
+           <div class="small-10  columns">
+            <%= f.text_field :last_name, placeholder:"Last Name" %><br>
+           </div>
+          </div>
+          <div class="row collapse">
+           <div class="small-10  columns">
+            <%= f.text_field :email, placeholder:"Email" %><br>
+           </div>
+          </div>
+         <div class="row collapse">
+           <div class="small-10 columns ">
+            <%= f.password_field :password, placeholder:"Password" %><br>
+           </div>
+         </div>
+      </div>
+        <%= f.submit "Sign In", class:"button radius sign-in-button"%>
+        <p> Already have an account? <%= link_to "Sign in", login_path %></p>
+        <% end %>
+     </div>
+   </div>
+  </div>
