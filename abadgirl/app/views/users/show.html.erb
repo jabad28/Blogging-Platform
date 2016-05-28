@@ -1,6 +1,10 @@
 <div>
   Welcome, <%= @user.first_name %>
 </div>
+<div class="large-3 small-12 columns expand">
+  <%= link_to "Edit Profile", edit_user_profile_path(@user), method: :get, class: "link"%>
+  <a href="#" class="button expand"></a>
+</div>
 
 <section class="search">
   <div class="row">

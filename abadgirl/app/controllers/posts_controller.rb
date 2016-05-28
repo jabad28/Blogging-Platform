@@ -7,6 +7,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    @post = Post.find_by_id(params[:id])
+    render :show
   end
 
   # GET /posts/new
@@ -14,18 +16,13 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  # GET /posts/1/edit
-  def edit
-    @post = Post.find(params[:post_id])
-  end
-
   # POST /posts
   def create
     @post = Post.new(post_params)
     @post.save
-    if current_user.posts.push(@post)
+    if current_user.posts << @post
       flash[:notice] = "#{@post.title} created"
-      redirect_to user_post_path(current_user.first_name,@post)
+      redirect_to post_path(@post)
     else
       @post.destroy
       flash[:error] = "Something went wrong, please post again."
@@ -33,9 +30,14 @@ class PostsController < ApplicationController
     end
   end
 
+  # GET /posts/1/edit
+  def edit
+    @post = Post.find(params[:id])
+  end
+
   # PUT /posts/1
   def update
-    @post = Post.find(params[:post_id])
+    @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success] = "Your post was successfully changed."
       redirect_to user_path(@post.user)
