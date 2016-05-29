@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: "users#index"
+  root to: "splash#index"
+
+  get "/splash", to: "splash#index"
 
   get "/users", to: "users#index", as: "users"
   get "/users/new", to: "users#new", as: "new_user"
@@ -19,5 +21,8 @@ Rails.application.routes.draw do
   post "/posts/", to: "posts#create"
   patch "/posts/:id", to: "posts#update"
   delete "/posts/:id", to: "posts#destroy", as: "destroy_post"
+
+  post "/beauty/new", to: "posts#new_beauty"
+  post "/fashion/new", to: "posts#new_fashion"
 
 end

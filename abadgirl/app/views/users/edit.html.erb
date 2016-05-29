@@ -9,8 +9,6 @@
     <%= f.text_field :email, placeholder:"Email" %> <br>
     <%= f.label :password %>
     <%= f.password_field :password, placeholder:"Password" %> <br>
-    <!-- <%= f.label :avatar %>
-    <%= f.file_field :avatar %> -->
     <%= f.submit "Save Changes", class: "btn-primary"%>
     <% end %>
     <%= button_to "Delete Profile", users_path, :method => :delete, class: "button delete-button", data: { confirm: "Are you sure? There is no coming back!"} %>

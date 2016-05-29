@@ -1,2 +1,20 @@
-<h3 class="new-post-title">Edit Post</h3>
-<%= render "form" %>
+<!-- <h3 class="new-post-title">Edit Post</h3>
+<%= render "form" %> -->
+<div class="row" id="edit-post">
+  <div class="medium-4 cloumn">
+    <%= form_for @post do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder:"Title" %> <br>
+    <%= f.label :body %>
+    <%= f.text_area :body, size: "60x12" %> <br>
+    <%= f.label :item_1 %>
+    <%= f.text_area :item_1, placeholder:"Item 1" %> <br>
+    <%= f.label :item_2 %>
+    <%= f.text_area :item_2, placeholder:"Item 2" %> <br>
+    <%= f.label :item_3 %>
+    <%= f.text_area :item_3, placeholder:"Item 3" %> <br>
+    <%= f.submit "Save Changes", class: "btn-primary"%>
+    <% end %>
+    <%= button_to "Delete Post", users_path, :method => :delete, class: "button delete-button", data: { confirm: "Are you sure you want to delete this post?"} %>
+  </div>
+</div>

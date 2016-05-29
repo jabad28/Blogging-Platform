@@ -12,7 +12,7 @@
       <h2> Create a Blog Post! </h2>
       <form class="custom">
         <div class="row">
-          <div class="large-3 small-12 columns">
+          <!-- <div class="large-3 small-12 columns">
             <label>
               Blog Type:
             </label>
@@ -20,9 +20,12 @@
                 <option value="beauty-blog">Beauty Blog</option>
                 <option value="fashion-blog">Fashion Blog</option>
               </select>
-          </div>
+          </div> -->
           <div class="large-3 small-12 columns expand">
-            <%= link_to "Create Blog Post", new_post_path(@post), method: :get, class: "link"%>
+            <%= link_to "Create Beauty Blog", new_post_path(@post), method: :get, class: "link"%>
+            <a href="#" class="button expand"></a>
+            <br>
+            <%= link_to "Create Fashion Blog", new_post_path(@post), method: :get, class: "link"%>
             <a href="#" class="button expand"></a>
           </div>
         </div>
