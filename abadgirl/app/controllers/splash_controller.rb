@@ -1,7 +1,9 @@
 class SplashController < ApplicationController
   def index
-    @post = Post.all
+    @user = User.new
+  end
 
-    # render :index
+  def about
+    render :about
   end
 end

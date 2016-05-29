@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: "splash#index"
 
   get "/splash", to: "splash#index"
+  get "/splash/about", to: "splash#about", as: "about"
 
   get "/users", to: "users#index", as: "users"
   get "/users/new", to: "users#new", as: "new_user"
@@ -22,7 +23,8 @@ Rails.application.routes.draw do
   patch "/posts/:id", to: "posts#update"
   delete "/posts/:id", to: "posts#destroy", as: "destroy_post"
 
-  post "/beauty/new", to: "posts#new_beauty"
-  post "/fashion/new", to: "posts#new_fashion"
-
+  post "/posts/new", to: "posts#new_beauty", as: "new_beauty_post"
+  post "/posts/new", to: "posts#new_fashion", as: "new_fashion_post"
+  get "/posts/:id", to: "posts#beauty", as: "beauty_post"
+  get "/posts/:id", to: "posts#fashion", as: "fashion_post"
 end

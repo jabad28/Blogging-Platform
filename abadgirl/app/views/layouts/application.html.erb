@@ -12,9 +12,15 @@
 
   <ul>
   <% if current_user %>
+    <li><%= link_to "Home", splash_path %></li>
+    <li><%= link_to "Beauty Blogs", new_beauty_post_path %></li>
+    <li><%= link_to "Fashion Blogs", new_fashion_post_path %></li>
     <li><%= link_to "Profile", user_path(current_user) %></li>
     <li><%= link_to "Log Out", logout_path %></li>
   <% else %>
+    <li><%= link_to "Home", splash_path %></li>
+    <li><%= link_to "Beauty Blogs", new_beauty_post_path %></li>
+    <li><%= link_to "Fashion Blogs", new_fashion_post_path %></li>
     <li><%= link_to "Create Account", new_user_path %></li>
     <li><%= link_to "Log In", login_path %></li>
   <% end %>
