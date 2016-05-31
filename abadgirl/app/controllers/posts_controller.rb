@@ -1,41 +1,76 @@
 class PostsController < ApplicationController
 
-  # GET /posts
+  @beauty = Beauty.new
+  @fashion = Fashion.new
+
   def index
     @post = Post.all
   end
 
-  # GET /posts/1
+  def index_beauty
+    @posts = Post.all
+  end
+
+  def index_fashion
+    @posts = Post.all
+  end
+
+
   def show
     @post = Post.find_by_id(params[:id])
     render :show
   end
 
-  # GET /posts/new
-  def new
+
+  def new_beauty
+    @posts = Post.all
     @post = Post.new
+    render :new_beauty
   end
 
-  # POST /posts
-  def create
+
+  def new_fashion
+    @post = Post.new
+    render :new_fashion
+  end
+
+
+  def beauty_create
     @post = Post.new(post_params)
     @post.save
+    @beauty = Beauty.new
+    @beauty.posts << @post
     if current_user.posts << @post
       flash[:notice] = "#{@post.title} created"
-      redirect_to post_path(@post)
+      redirect_to index_beauty_path(@post)
     else
       @post.destroy
       flash[:error] = "Something went wrong, please post again."
-      redirect_to new_post_path
+      redirect_to new_beauty_path
     end
   end
 
-  # GET /posts/1/edit
+  def fashion_create
+    @post = Post.new(post_params)
+    @post.save
+    @fashion = Fashion.new
+    @fashion.posts << @post
+    if current_user.posts << @post
+      flash[:notice] = "#{@post.title} created"
+      redirect_to index_fashion_path(@post)
+    else
+      @post.destroy
+      flash[:error] = "Something went wrong, please post again."
+      redirect_to new_fashion_path
+    end
+  end
+
+
   def edit
     @post = Post.find(params[:id])
   end
 
-  # PUT /posts/1
+
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
@@ -47,7 +82,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
+
   def destroy
     @post = Post.find(params[:post_id])
     @post.destroy
