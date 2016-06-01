@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
-  @beauty = Beauty.new
-  @fashion = Fashion.new
+
 
   def index
     @posts = Post.all
@@ -9,19 +8,17 @@ class PostsController < ApplicationController
   end
 
   def index_beauty
-    @posts = Post.all
-    @beauty = Beauty.all
+    @posts = Post.where(beauty_post: true)
   end
 
   def index_fashion
-    @posts = Post.all
-    @fashion = Fashion.all
+    @posts = Post.where(fashion_post: true)
   end
 
 
   def show
     @post = Post.find_by_id(params[:id])
-    @user = User.find_by_id(params[:id])
+    @user = current_user #User.find_by_id(params[:id])
   end
 
 
@@ -40,12 +37,11 @@ class PostsController < ApplicationController
 
   def beauty_create
     @post = Post.new(post_params)
+    @post.beauty_post = true
     @post.save
-    @beauty = Beauty.new
-    @beauty.posts << @post
     if current_user.posts << @post
       flash[:notice] = "#{@post.title} created"
-      redirect_to index_beauty_path(@post)
+      redirect_to index_beauty_path()
     else
       @post.destroy
       flash[:error] = "Something went wrong, please post again."
@@ -55,12 +51,11 @@ class PostsController < ApplicationController
 
   def fashion_create
     @post = Post.new(post_params)
+    @post.fashion_post = true
     @post.save
-    @fashion = Fashion.new
-    @fashion.posts << @post
     if current_user.posts << @post
       flash[:notice] = "#{@post.title} created"
-      redirect_to index_fashion_path(@post)
+      redirect_to index_fashion_path()
     else
       @post.destroy
       flash[:error] = "Something went wrong, please post again."
