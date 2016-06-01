@@ -4,21 +4,24 @@ class PostsController < ApplicationController
   @fashion = Fashion.new
 
   def index
-    @post = Post.all
+    @posts = Post.all
+    @users = User.all
   end
 
   def index_beauty
     @posts = Post.all
+    @beauty = Beauty.all
   end
 
   def index_fashion
     @posts = Post.all
+    @fashion = Fashion.all
   end
 
 
   def show
     @post = Post.find_by_id(params[:id])
-    render :show
+    @user = User.find_by_id(params[:id])
   end
 
 
@@ -68,14 +71,16 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @user = current_user
   end
 
 
   def update
     @post = Post.find(params[:id])
+    @user = current_user
     if @post.update(post_params)
       flash[:success] = "Your post was successfully changed."
-      redirect_to user_path(@post.user)
+      redirect_to post_path(@post)
     else
       flash[:error] = "There was an error in your changes."
       redirect_to edit_post_path(@post)
@@ -84,7 +89,7 @@ class PostsController < ApplicationController
 
 
   def destroy
-    @post = Post.find(params[:post_id])
+    @post = Post.find(params[:id])
     @post.destroy
     redirect_to root_path
   end
@@ -93,7 +98,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :category, :beauty_post, :fashion_post, :item_1, :item_2, :item_3, :photo)
+    params.require(:post).permit(:title, :body, :category, :beauty_post, :fashion_post, :item_1, :item_2, :item_3, :photo_url)
   end
 
 

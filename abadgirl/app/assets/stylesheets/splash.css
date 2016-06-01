@@ -1,124 +1,59 @@
-/******************** carosel style ***************************/
-.logo{
-  width: 50px;
-  height: 50px;
-  margin-top: -15px;
-}
-.splashWelcome{
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  text-shadow: 2px 2px #3a3a3a;
-}
-.fixed {
-  position:fixed;
-  z-index:999;
-  width: 100%;
-}
-.yield{
-  display: block;
-  width: 90%;
-  margin: auto;
-}
-#myCarousel{
-  height: 450px;
-}
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: auto;
-    height: 450px;
-    margin: auto;
-}
-.advert{
-  position: relative;;
-  bottom: 90%;
-}
-/******************** carosel style end ***************************/
-
 
 /******************** splash views style ***************************/
-
-.inner-wrap {
-  width: auto;
+.p-splash-1{
+  margin-top: 19%;
 }
-.move-right .inner-wrap {
-  -ms-transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-  margin-left: 114px;
+.p-splash-2{
+  margin-top: 25%;
+  margin
 }
-.left-off-canvas-menu {
-  -ms-transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-  position: fixed;
-  width: 0;
-  height: 100%;
+.img-splash-2{
+  margin-top: 10%;
 }
-.move-right .left-off-canvas-menu {
-  width: 114px;
-}
-.move-right .exit-off-canvas {
-  display: none;
-}
-.left-off-canvas-toggle {
-  display: none;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  font-size: 3rem;
-  color: #333;
-  transition: all .25s ease-in-out;
-}
-.left-off-canvas-toggle:focus {
-  color: #333;
-}
-.left-off-canvas-toggle:hover {
-  color: #8c8c8c;
-  transition: all .25s ease-in-out;
-}
-.ad-block {
-  margin-bottom: 2rem;
-}
-.p-splash-1 {
-  height: 50%;
-  width: 50%;
-  margin-left: 47%;
-  margin-top: -21%;
-}
-.p-splash-2 {
-  height: 50%;
-  width: 50%;
-  margin-left: -6%;
-  margin-top: -21%;
-}
-#img-splash-1 {
-  height: 50%;
-  width: 50%;
-  margin-left: -6%;
-}
-#img-splash-2 {
-  height: 50%;
-  width: 50%;
-  margin-left: 47%;
-  margin-top: 13%;
+.logo-image{
+  margin-left: 14%;
+  margin-top: -3%;
 }
 /******************** splash views end ***************************/
+#A4823E
+/******************** navbar style ***************************/
+
+.sub-nav {
+  background-color: #f2f2f2;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.sub-nav li {
+  color: #C19B4B;
+  font-size: 0.77778rem;
+  padding-left: 0.88889rem;
+}
+.sub-nav li.active a {
+  border-radius: 3px;
+  background: #C19B4B;
+  color: #C19B4B;
+  cursor: default;
+  font-weight: normal;
+  padding: 0.16667rem 0.88889rem;
+}
+a{
+  color: #C19B4B;
+}
+.menu{
+  margin: 3%;
+  margin-left: 2%;
+}
+/******************** navbar style end ***************************/
 
 /******************** footer style ***************************/
 .footer {
-  background-color: rgba(52,65,70,1);
+  background-color: #f2f2f2;
   text-align: center;
   font-size: 1.2rem;
-  padding: 4rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
   margin-top: 20%;
 }
 .footer p.slogan {
-  color: #8d9093;
+  color: #C19B4B;
   font-size: 1.8rem;
   margin: 0 0 1rem;
 }
@@ -130,7 +65,7 @@
 .footer .links a {
   list-style: none;
   font-weight: bold;
-  color: #ffffff;
+  color: #C19B4B;
   padding: 3rem 0 2rem;
   margin: 0;
 }
@@ -164,7 +99,7 @@
     }
     a {
       font-weight: bold;
-      font-size: emCalc(14px);
+      font-size: 0.77778rem;
     }
   }
   .line {

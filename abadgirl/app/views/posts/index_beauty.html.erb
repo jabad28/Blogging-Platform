@@ -1,13 +1,50 @@
+<script>
+jQuery(function(){
+
+    var minimized_elements = $('p.postData');
+
+    minimized_elements.each(function(){
+        var t = $(this).text();
+        if(t.length < 250) return;
+
+        $(this).html(
+            t.slice(0,250)+'<span>... </span><a href="#" class="more">Read More</a>'+
+            '<span style="display:none;">'+ t.slice(250,t.length)+' <a href="#" class="less">Less</a></span>'
+        );
+
+    });
+
+    $('a.more', minimized_elements).click(function(event){
+        event.preventDefault();
+        $(this).hide().prev().hide();
+        $(this).next().show();
+    });
+
+    $('a.less', minimized_elements).click(function(event){
+        event.preventDefault();
+        $(this).parent().hide().prev().show().prev().show();
+    });
+});
+</script>
+
+<div class="logo">
+  <%= image_tag "abadgirl.png", class:"logo-image" %>
+</div>
+
 <div class="row">
   <div class="large-12 columns ">
     <h1 class="beauty-post-title"> Beauty Index Page</h1>
   </div>
 </div>
 
+<div class="blog-post">
 <% if current_user != @user %>
   <% @posts.order(created_at: :desc).each do |post| %>
   User:<%= link_to post.user, post %><br>
   Title:<%= link_to post.title, post %><br>
   Body:<%= post.body %>
+  <div class="blog-post-img"><img src="<%=post.photo_url%>" alt="" /><div>
+  <hr>
   <% end %>
 <% end %>
+</div>

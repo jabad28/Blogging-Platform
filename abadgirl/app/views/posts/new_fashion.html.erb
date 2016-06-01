@@ -4,9 +4,7 @@
     <%= form_for @post, url: fashion_create_path do |f| %>
       <div> <%= f.text_field :title, placeholder: "Title"%> </div><br>
       <div> <%= f.text_area :body, placeholder: "Body", size: "60x12" %> </div><br>
-      <div> <%= f.text_area :item_1, placeholder: "Item 1" %> </div>
-      <div> <%= f.text_area :item_2, placeholder: "Item 2" %> </div>
-      <div> <%= f.text_area :item_3, placeholder: "Item 3" %> </div>
+      <div> <%= f.text_area :photo_url, placeholder: "Image Url" %> </div>
       <div> <%= f.submit "Submit", class: "btn btn-primary" %> </div>
     <% end %>
   </div>

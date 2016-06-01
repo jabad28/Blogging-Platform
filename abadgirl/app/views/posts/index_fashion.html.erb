@@ -1,13 +1,22 @@
+
+<div class="logo">
+  <%= image_tag "abadgirl.png", class:"logo-image" %>
+</div>
+
 <div class="row">
   <div class="large-12 columns ">
     <h1 class="fsahion-post-title"> Fashion Index Page</h1>
   </div>
 </div>
 
+<div class="blog-post">
 <% if current_user != @user %>
   <% @posts.order(created_at: :desc).each do |post| %>
   User:<%= link_to post.user, post %><br>
   Title:<%= link_to post.title, post %><br>
   Body:<%= post.body %>
+  <img src="<%=post.photo_url%>" alt="" />
+  <hr>
   <% end %>
 <% end %>
+</div>
