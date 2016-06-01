@@ -21,4 +21,18 @@
      height: 45px;
      margin-top:25px;
    }
-/******************** dropdown form style end ***************************/
+/******************** blog post show style style end ***************************/
+/* Styles for search results */
+.results {
+  margin-top: 50px;
+}
+.results .search-results {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.results img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+/******************** blog post show style end ***************************/
