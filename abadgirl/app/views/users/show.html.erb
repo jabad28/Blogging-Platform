@@ -2,11 +2,9 @@
   <%= image_tag "abadgirl.png", class:"logo-image" %>
 </div>
 
-<hr>
+<br>
+<br>
 
-<div class="welcome-name">
-  Welcome, <%= @user.first_name %> <%= @user.last_name%>
-</div>
 <div class="large-3 small-12 columns expand">
 
 </div>
@@ -19,13 +17,14 @@
         <div class="row">
 
           <div class="large-3 small-12 columns expand">
+            <div class="welcome-name">Welcome, <%= @user.first_name %> <%= @user.last_name%></div>
             <a class="edit-user-profile-button"><%= link_to "Edit Profile", edit_user_profile_path(@user), method: :get, class: "link"%></a>
             <br>
             <a class="create-blog-post-button"><%= link_to "Create Beauty Blog", new_beauty_path(@post), method: :get, class: "link"%></a>
             <br>
             <a class="create-blog-post-button"><%= link_to "Create Fashion Blog", new_fashion_path(@post), method: :get, class: "link"%></a>
           </div>
-          
+
         </div>
       </form>
     </div>

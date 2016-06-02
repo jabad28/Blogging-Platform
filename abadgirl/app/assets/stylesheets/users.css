@@ -100,6 +100,11 @@ span.prefix, label.prefix {
   font-family: 'Kaushan Script', cursive;
 }
 .create-blog-post-button{
-  
+
+}
+.welcome-name{
+  font-size: 25px;
+
+  font-family: 'Kaushan Script', cursive;
 }
 /******************** profile form style end ***************************/
