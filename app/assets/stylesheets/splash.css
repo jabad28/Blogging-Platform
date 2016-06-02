@@ -4,15 +4,28 @@
   margin-top: 19%;
 }
 .p-splash-2{
-  margin-top: 25%;
-  margin
+  margin-top: 38%;
+}
+#img-splash-1{
+  margin-top: 20%%;
 }
 .img-splash-2{
-  margin-top: 10%;
+  margin-top: 20%
 }
 .logo-image{
   margin-left: 14%;
   margin-top: -3%;
+}
+.links{
+  font-family: 'Kaushan Script', cursive;
+  margin: 2%;
+}
+.copywrite{
+  font-family: 'Kaushan Script', cursive;
+}
+.logo-sub-title{
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
 }
 /******************** splash views end ***************************/
 #A4823E
@@ -113,10 +126,5 @@ a{
     height: 1500px;
   }
 }
-/*.developers-title{
-  font-family: 'Bangers', cursive;
-  font-size: 80px;
-  color: rgba(52,65,70,1);
-  margin-left: 20%;
-}*/
+
 /******************** footer style end ***************************/

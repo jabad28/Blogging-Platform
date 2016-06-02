@@ -23,9 +23,6 @@ Rails.application.routes.draw do
   patch "/posts/:id", to: "posts#update"
   delete "/posts/:id", to: "posts#destroy", as: "destroy_post"
 
-  # get "/posts/beauty", to: "posts#index_beauty", as: "beauty"
-  # get "/posts/fashion", to: "posts#index_fashion", as: "fashion"
-
   get "/beauty/posts/new", to: "posts#new_beauty", as: "new_beauty"
   get "/fashion/posts/new", to: "posts#new_fashion", as: "new_fashion"
   get "/beauty/posts", to: "posts#index_beauty", as: "index_beauty"

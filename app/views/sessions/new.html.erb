@@ -3,21 +3,21 @@
 <div class="row">
    <div class="large-6 columns">
      <div class="signup-panel">
-       <p class="welcome"> Welcome Back!</p>
+       <p class="sign-in-welcome-title"> Welcome Back!</p>
         <%= form_for @user, url: "/sessions", method: "post" do |f| %>
           <div class="row collapse">
-           <div class="small-10  columns">
+           <div id="sign-in-form" class="small-10  columns">
             <%= f.text_field :email, placeholder:"Email" %><br>
            </div>
           </div>
          <div class="row collapse">
-           <div class="small-10 columns ">
+           <div id="sign-in-form" class="small-10 columns ">
             <%= f.password_field :password, placeholder:"Password" %><br>
            </div>
          </div>
       </div>
-        <%= f.submit "Sign In", class:"button radius sign-in-button"%>
-        <p> Don't have an account? <%= link_to "Create Account", new_user_path %></p>
+        <p id="p-sign-up"> Don't have an account? <%= link_to "Create Account", new_user_path %></p>
+        <%= f.submit "Sign In", class:"button sign-in-button"%>
         <% end %>
      </div>
    </div>
