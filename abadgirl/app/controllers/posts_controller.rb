@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
 
-
-
   def index
     @posts = Post.all
     @users = User.all
@@ -93,7 +91,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :category, :beauty_post, :fashion_post, :item_1, :item_2, :item_3, :photo_url)
+    params.require(:post).permit(:title, :body, :beauty_post, :fashion_post, :photo_url)
   end
 
 

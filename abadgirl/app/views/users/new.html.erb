@@ -24,20 +24,10 @@
            <div class="small-10 columns ">
             <%= f.password_field :password, placeholder:"Password" %><br>
            </div>
-           <div>
-            <%= f.text_field :photo, placeholder: "Picture URL" ,class: "new-user form-control"%>
-          </div>
          </div>
       </div>
         <%= f.submit "Create Account", class:"button radius create-account-button"%>
         <p> Already have an account? <%= link_to "Sign in", login_path %></p>
-        <div class="renderProfilePicture">
-        <div class="renderPicture">
-          <img class="samplePic" src="https://lh3.googleusercontent.com/-NIp5BzqFqNE/AAAAAAAAAAI/AAAAAAAAAAA/CapeXh7GWeI/photo.jpg" alt="" />
-        </div>
-        <p class="samplePicText"> Preview</p>
         <% end %>
-      </div>
      </div>
    </div>
-  </div>
