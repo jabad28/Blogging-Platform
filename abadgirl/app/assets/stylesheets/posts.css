@@ -1,26 +1,25 @@
-/******************** dropdown form style ***************************/
-.search{
-   margin-top: 50px;
- }
-  h2{
-     text-align: center;
-   }
-   form.custom .custom.dropdown{
-     height: 45px;
-   }
-   label{
-     margin-bottom: 10px;
-   }
-   form.custom .custom.dropdown{
-     padding-top: 5px;
-   }
-   form.custom .custom.dropdown .selector{
-     top: 5px;
-   }
-   .button{
-     height: 45px;
-     margin-top:25px;
-   }
+/******************** new post form style ***************************/
+.new-post-form{
+  width: 50%;
+  margin-left: 25%;
+}
+.beauty-post-title{
+  margin-left: 33%;
+  font-size: 45px;
+  font-family: 'Kaushan Script', cursive;
+}
+.fashion-post-title{
+  margin-left: 33%;
+  margin-left: 32%;
+  font-family: 'Kaushan Script', cursive;
+}
+.button{
+  margin-left: 46%;
+  background-color: #C19B4B;
+}
+/******************** new post form style end ***************************/
+
+
 /******************** blog post show style style end ***************************/
 /* Styles for search results */
 .results {
