@@ -5,6 +5,15 @@
 
 ![Alt text](app/assets/images/abadgirl_screenshot.png)
 
+##TECHNOLOGIES USED:
+* Ruby on rails
+* Foundation
+* jQuery
+* Heroku
+
+##WORKFLOW TOOLS:
+* Trello: https://trello.com/b/oE6koIUz/project-3
+
 ##PLANNED FEATURES:
 * A user can create an account with first&last name, email, and password.
 * A user can update or delete their profile.
