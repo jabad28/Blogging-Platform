@@ -11,10 +11,8 @@
  * file per style scope.
  *
  *= require foundation
- *= require_tree .
  *= require_self
+ *= require_tree .
  *= require foundation_and_overrides
 
  */
-
- @import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
