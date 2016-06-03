@@ -8,9 +8,8 @@
           <% if @post %>
             <% post = @post %>
           <div id="user-show-div" class="small-12 large-8 columns">
-              <div class="user-show-name"><h6>User: <strong><%= link_to current_user.first_name, user_path(current_user)%></h6></div>
+              <div class="user-show-name"><h6>Created By: <strong><%= link_to current_user.first_name, user_path(current_user)%></h6></div>
               <div class="user-show-name"><p><%= link_to post.title, post_path(post) %></p></div>
-
               <div class="user-show-image"><img src="<%=post.photo_url%>" alt="" /></div>
               <div class="user-show-body"><p><%= post.body %></p></div>
               </div>

@@ -51,9 +51,6 @@
 .user-show-body{
   text-align: center;
 }
-.user-show-image{
-
-}
 #user-show-div{
   margin-top: 12%;
   margin-left: 7%;
@@ -62,3 +59,30 @@
   margin-left: 32%;
 }
 /******************** blog post show style end ***************************/
+
+a{
+  font-family: 'Kaushan Script', cursive;
+}
+p{
+  font-family: 'Kaushan Script', cursive;
+}
+li{
+  font-family: 'Kaushan Script', cursive;
+}
+h6{
+  font-family: 'Kaushan Script', cursive;
+}
+.save-changes-button{
+  margin-left: 15%;
+  background-color: #C19B4B;
+}
+#edit-post{
+  margin-left: 10%;
+}
+.delete-button{
+  margin-left: 55%;
+  margin-top: -22%;
+}
+.button:hover, .button:focus{
+    background-color: #C19B4B;
+}

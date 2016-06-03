@@ -9,7 +9,7 @@
     <%= f.text_area :body, size: "60x12" %> <br>
     <%= f.label :photo_url %>
     <%= f.text_area :photo_url, placeholder:"Image Url" %> <br>
-    <%= f.submit "Save Changes", class: "btn-primary"%>
+    <%= f.submit "Save Changes", class: "button save-changes-button"%>
     <% end %>
     <%= button_to "Delete Post", post_path, :method => :delete, class: "button delete-button", data: { confirm: "Are you sure you want to delete this post?"} %>
   </div>

@@ -1,10 +1,12 @@
 
 /******************** splash views style ***************************/
 .p-splash-1{
-  margin-top: 19%;
+  margin-top: 32%;
+    font-family: 'Kaushan Script', cursive;
 }
 .p-splash-2{
-  margin-top: 38%;
+  margin-top: 50%;
+  font-family: 'Kaushan Script', cursive;
 }
 #img-splash-1{
   margin-top: 20%;
@@ -14,7 +16,7 @@
 }
 .logo-image{
   margin-left: 14%;
-  margin-top: -3%;
+
 }
 .links{
   font-family: 'Kaushan Script', cursive;
@@ -39,6 +41,7 @@
   color: #C19B4B;
   font-size: 0.77778rem;
   padding-left: 0.88889rem;
+  font-family: 'Kaushan Script', cursive;
 }
 .sub-nav li.active a {
   border-radius: 3px;
