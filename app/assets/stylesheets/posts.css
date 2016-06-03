@@ -4,15 +4,14 @@
   margin-left: 25%;
 }
 .beauty-post-title{
-  margin-left: 33%;
+  margin-left: 24%;
   margin-top: 5%;
   font-size: 45px;
   font-family: 'Kaushan Script', cursive;
 }
 .fashion-post-title{
-  margin-left: 33%;
+  margin-left: 25%;
   margin-top: 5%;
-  margin-left: 32%;
   font-family: 'Kaushan Script', cursive;
 }
 .button{
@@ -24,6 +23,14 @@
 }
 #index-beauty-page{
   margin-left: 15%;
+}
+.fashion-post-title-index{
+  margin-left: 33%;
+  font-family: 'Kaushan Script', cursive;
+}
+.beauty-post-title-index{
+  margin-left: 33%;
+  font-family: 'Kaushan Script', cursive;
 }
 /******************** new post form style end ***************************/
 
@@ -84,5 +91,5 @@ h6{
   margin-top: -22%;
 }
 .button:hover, .button:focus{
-    background-color: #C19B4B;
+  background-color: #C19B4B;
 }
