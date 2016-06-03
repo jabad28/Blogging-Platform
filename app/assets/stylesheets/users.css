@@ -90,9 +90,7 @@ span.prefix, label.prefix {
   margin-top: 1%;
   background-color: #C19B4B;
 }
-.edit-account-button{
-  background-color: #C19B4B;
-}
+
 
 /******************** log-in form style end ***************************/
 
@@ -107,5 +105,17 @@ span.prefix, label.prefix {
 .welcome-name{
   font-size: 25px;
   font-family: 'Kaushan Script', cursive;
+}
+#edit-user-profile{
+
+}
+.save-account-button{
+  background-color: #C19B4B;
+  margin-left: 12%;
+}
+.delete-account-button{
+  background-color: #C19B4B;
+  margin-top: -21%;
+  margin-left: 57%;
 }
 /******************** profile form style end ***************************/

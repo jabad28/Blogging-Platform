@@ -9,8 +9,8 @@
     <%= f.text_field :email, placeholder:"Email" %> <br>
     <%= f.label :password %>
     <%= f.password_field :password, placeholder:"Password" %> <br>
-    <%= f.submit "Save Changes", class: "button edit-account-button"%>
+    <%= f.submit "Save Changes", class: "button save-account-button"%>
     <% end %>
-    <%= button_to "Delete Profile", users_path, :method => :delete, class: "button radius create-account-button", data: { confirm: "Are you sure? There is no coming back!"} %>
+    <%= button_to "Delete Profile", users_path, :method => :delete, class: "button radius delete-account-button", data: { confirm: "Are you sure? There is no coming back!"} %>
   </div>
 </div>
