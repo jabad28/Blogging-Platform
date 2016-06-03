@@ -12,12 +12,12 @@
 <section class="search">
   <div class="row">
     <div class="small-12 large-10 columns small-centered">
-      <h2 class="blog-post-title"> Create a Blog Post! </h2>
+      <h3 class="blog-post-title"> Create a Blog Post! </h3>
       <form class="custom">
         <div class="row">
 
           <div class="large-3 small-12 columns expand">
-            <div class="welcome-name">Welcome, <%= @user.first_name %> <%= @user.last_name%></div>
+            <div class="welcome-name">Welcome, <%= @user.first_name %> <%= @user.last_name%></div><br>
             <a class="edit-user-profile-button"><%= link_to "Edit Profile", edit_user_profile_path(@user), method: :get, class: "link"%></a>
             <br>
             <a class="create-blog-post-button"><%= link_to "Create Beauty Blog", new_beauty_path(@post), method: :get, class: "link"%></a>
