@@ -13,16 +13,6 @@
 .signup-panel form input, .signup-panel form span {
   height: 50px;
 }
-/*.signup-panel .welcome {
-  font-size: 26px;
-  text-align: center;
-  margin-left: 0;
-}*/
-/*.signup-panel p {
-  font-size: 13px;
-  font-weight: 200;
-  margin-left: 25%;
-}*/
 .signup-panel .button {
   margin-left: 42%;
 }
@@ -99,9 +89,6 @@ span.prefix, label.prefix {
   margin-left: 28%;
   font-family: 'Kaushan Script', cursive;
 }
-.create-blog-post-button{
-
-}
 .welcome-name{
   font-size: 25px;
   font-family: 'Kaushan Script', cursive;
@@ -118,7 +105,5 @@ span.prefix, label.prefix {
   margin-top: -21%;
   margin-left: 57%;
 }
-.favicon-image{
-  
-}
+
 /******************** profile form style end ***************************/
