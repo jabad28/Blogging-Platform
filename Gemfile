@@ -33,6 +33,10 @@ gem 'better_errors'
 
 gem 'foundation-rails'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
