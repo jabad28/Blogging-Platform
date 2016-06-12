@@ -2,6 +2,8 @@
 * AbadGirl.com
 * A Beauty and Fashion Blogging platform where user's can create blog post about what they are passionate about.  User's are able to add a URL photo to their beauty or fashion blog post and can share for other user's to see.
 
+https://abadgirl.herokuapp.com
+
 
 ![Alt text](app/assets/images/abadgirl_screenshot.png)
 
